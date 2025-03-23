@@ -2,6 +2,9 @@ import Image from "next/image";
 import { FaLinkedin } from "react-icons/fa";
 import { BackgroundGradientAnimation } from "./ui/background-gradient-animation";
 import { AnimatedTestimonials } from "./ui/animated-testimonials";
+import { Dancing_Script } from 'next/font/google';
+
+const scriptFont = Dancing_Script({ subsets: ['latin'], weight: ['400', '700'] });
 
 
 
@@ -95,12 +98,12 @@ import { AnimatedTestimonials } from "./ui/animated-testimonials";
 
 export default function Team() {
   return (
-    <div className="w-screen h-screen overflow-hidden flex justify-center items-center relative ">
-
-    <div className="w-auto h-auto absolute">
+    <div className="w-screen h-screen overflow-hidden flex justify-center items-center relative bg-[#001D1B]" id="team">
+    <div className="w-auto h-auto absolute flex flex-col">
+    <div className={`z-10 text-5xl text-[#CBC6C6] w-full text-center ${scriptFont.className}`}>The Team</div>
     <AnimatedTestimonials testimonials={testimonials}/>
     </div>
-    <BackgroundGradientAnimation/>
+    {/* <BackgroundGradientAnimation/> */}
         </div>
   );
 }

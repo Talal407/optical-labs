@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { BackgroundGradientAnimation } from "./ui/background-gradient-animation";
+import Link from "next/link";
 
 export default function Landing() {
   return (
@@ -54,25 +55,25 @@ const EmailSection=()=>{
 const Nav=()=>{
     return(
         <div className="w-full flex items-center justify-between font-bold text-[#E8DFE7] z-10">
-                <div className="flex flex-col w-[12rem] items-center gap-1">
+                <Link href={"#team"} className="flex flex-col w-[12rem] items-center gap-1" >
                     <div className="w-full h-[1.5px] bg-[#686464]"></div>
                     <div>MEET THE TEAM</div>
                     <div className="w-full h-[1px] bg-[#686464]"></div>
-                </div>
+                </Link>
 
-                <div className="flex flex-col w-[12rem] items-center gap-1">
+                <Link href={"#contact"} className="flex flex-col w-[12rem] items-center gap-1">
                     <div className="w-full h-[1.5px] bg-[#686464]"></div>
                     <div>OPTICAL MEDIA</div>
                     <div className="w-full h-[1px] bg-[#686464]"></div>
-                </div>
+                </Link>
 
 
 
-                <div className="flex flex-col w-[12rem] items-center gap-1">
+                <Link href={"#podcast"} className="flex flex-col w-[12rem] items-center gap-1">
                     <div className="w-full h-[1.5px] bg-[#686464]"></div>
                     <div>YOU & AI</div>
                     <div className="w-full h-[1px] bg-[#686464]"></div>
-                </div>
+                </Link>
         </div>
     )
 }
